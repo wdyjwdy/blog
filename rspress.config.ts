@@ -8,6 +8,8 @@ export default defineConfig({
   title: 'blog',
   themeConfig: {
     hideNavbar: 'always',
+    outlineTitle: 'TOC',
   },
   plugins: [mermaid()],
+  globalStyles: path.join(__dirname, 'docs/index.css'),
 });
