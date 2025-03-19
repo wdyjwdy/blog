@@ -24,7 +24,7 @@ export function Card({ folder, files }) {
         {files.map((file, index) => (
           <Link
             key={index}
-            url={"./" + folder.toLowerCase() + "/" + file}
+            url={"./" + folder.toLowerCase() + "/" + file + ".html"}
             fileName={file}
           />
         ))}
