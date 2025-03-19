@@ -1,0 +1,44 @@
+---
+pageType: blank
+---
+
+export const data = [
+  { folder: "Network", files: ["CDN", "DNS", "HTTP", "TCP", "UDP"] },
+];
+
+export function App() {
+  return (
+    <div className="app">
+      {data.map((item, index) => (
+        <Card key={index} folder={item.folder} files={item.files} />
+      ))}
+    </div>
+  );
+}
+
+export function Card({ folder, files }) {
+  return (
+    <div className="card">
+      <p>{folder}</p>
+      <div>
+        {files.map((file, index) => (
+          <Link
+            key={index}
+            url={"./" + folder.toLowerCase() + "/" + file}
+            fileName={file}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function Link({ url, fileName }) {
+  return (
+    <a className="link" href={url}>
+      {fileName}
+    </a>
+  );
+}
+
+<App />
