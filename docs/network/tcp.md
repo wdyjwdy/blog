@@ -68,7 +68,7 @@ Suppose that the file consisting of 500,000 bytes, that the MSS is 1,000 bytes.
 - segment 2 gets assigned sequence number 1,000
 - segment 500 gets assigned sequence number 499,000
 
-![Sequence Numbers](../imgs/network-tcp-seqnum.svg)
+![Sequence Numbers](../../imgs/network-tcp-seqnum.svg)
 
 > [!TIP]
 >
@@ -111,7 +111,7 @@ Extending the host-to-host delivery service provided by the network layer to a *
 1. **multiplexing**: gathering data from different sockets, and passing the segments to the network layer
 2. **demultiplexing**: delivering the data in segment to the correct socket
 
-![multiplexing](../imgs/network-udp-multiplexing.svg)
+![multiplexing](../../imgs/network-udp-multiplexing.svg)
 
 > [!TIP]
 >
@@ -224,7 +224,7 @@ sequenceDiagram
 
 由下图可知 Stop-and-wait 效率低于 Pipelining
 
-![pipelining](../imgs/network-tcp-pipelining.svg)
+![pipelining](../../imgs/network-tcp-pipelining.svg)
 
 在管道协议中，数据包可能会乱序，因此 ACK 需要指定对应的 SEQ，例如：
 
@@ -246,7 +246,7 @@ GBN 是一个管道协议，但它限制了管道中数据包的数量，即窗�
 - 发送方重传时，会重传目标数据包，及其之后的数据包
 - 接收方收到逆序数据包时，直接丢弃
 
-![gbn](../imgs/network-tcp-gbn.svg)
+![gbn](../../imgs/network-tcp-gbn.svg)
 
 ### SR (Selective Repeat)
 
@@ -255,7 +255,7 @@ GBN 协议在某个数据包丢失或出错或乱序时，会导致大量数据�
 - 发送方重传时，只会重传目标数据包
 - 接收方收到逆序数据包时，会缓存下来
 
-![sr](../imgs/network-tcp-sr.svg)
+![sr](../../imgs/network-tcp-sr.svg)
 
 > [!TIP]
 >
@@ -295,7 +295,7 @@ sequenceDiagram
 
 TCP provides a flow-control service to its applications to eliminate the possibility of the sender overflowing the receiver’s buffer. The sender need makes sure that $LastByteSent – LastByteAcked <= ReceiveWindow$.
 
-![flow-control](../imgs/network-tcp-flow-control.svg)
+![flow-control](../../imgs/network-tcp-flow-control.svg)
 
 ## Connection Establishment
 
